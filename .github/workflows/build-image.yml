@@ -16,6 +16,7 @@ jobs:
           run: docker build -t python-app .
       
         - name: Run Docker container
-          run: |
-            docker run -d --name python-app python-app
-            docker logs python-app
+          run: docker run -d --name python-app python-app
+        - name: check log
+          run: docker logs python-app
+            
